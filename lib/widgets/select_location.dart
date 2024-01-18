@@ -53,7 +53,7 @@ class _LocationSelectorState extends State<LocationSelector> {
       });
     }
     final url = Uri.parse(
-        'https://maps.googleapis.com/maps/api/geocode/json?latlng=${locationData.latitude},${locationData.longitude}&key=AIzaSyCQtOA-Z6f3dAwd_QWjJMEwkLdfrI9fAtY');
+        'https://maps.googleapis.com/maps/api/geocode/json?latlng=${locationData.latitude},${locationData.longitude}&key=API_KEY');
     final response = await http.get(url);
     final data = json.decode(response.body);
     loc = PlaceLocation(
@@ -68,7 +68,7 @@ class _LocationSelectorState extends State<LocationSelector> {
   
   void selectLocation(LatLng location) async{
     final url = Uri.parse(
-        'https://maps.googleapis.com/maps/api/geocode/json?latlng=${location.latitude},${location.longitude}&key=AIzaSyCQtOA-Z6f3dAwd_QWjJMEwkLdfrI9fAtY');
+        'https://maps.googleapis.com/maps/api/geocode/json?latlng=${location.latitude},${location.longitude}&key=API_KEY');
     final response = await http.get(url);
     final data = json.decode(response.body);
     loc = PlaceLocation(
