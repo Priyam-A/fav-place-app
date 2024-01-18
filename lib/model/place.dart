@@ -10,7 +10,7 @@ class PlaceLocation{
   final double longitude;
   String formatted_address;
   Image get image{
-    return Image.network('https://maps.googleapis.com/maps/api/staticmap?center=$latitude,$longitude&zoom=12&size=600x300&maptype=roadmap&markers=color:red%12Clabel:S%7C$latitude,$longitude&key=AIzaSyCQtOA-Z6f3dAwd_QWjJMEwkLdfrI9fAtY',
+    return Image.network('https://maps.googleapis.com/maps/api/staticmap?center=$latitude,$longitude&zoom=12&size=600x300&maptype=roadmap&markers=color:red%12Clabel:S%7C$latitude,$longitude&key=API_KEY',
             fit: BoxFit.cover,
             height: double.infinity,
             width: double.infinity,);
